@@ -1,6 +1,6 @@
 from pwn import *
 
-elf = ELF('./temp/babyof', checksec=False)
+elf = ELF('./temp/ezr0p', checksec=False)
 
 for addr in elf.search(b'sh\x00', executable=True):
     print(f'找到 sh: {hex(addr)}')
